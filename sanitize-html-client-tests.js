@@ -1,7 +1,6 @@
 // Write your tests here!
-// Here is an example.
 
-Tinytest.add('sanitizeHtml', function (test) {
+Tinytest.add('sanitizeHtml (client version)', function (test) {
     var dirty = 'some <b>really tacky</b> HTML';
     var clean = sanitizeHtml(dirty);
     test.equal(dirty, clean);
