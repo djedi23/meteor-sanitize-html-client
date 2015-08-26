@@ -10,9 +10,15 @@ Package.describe({
   documentation: 'README.md'
 });
 
+Npm.depends({'sanitize-html':'1.9.0'});
+
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.addFiles('sanitize-html-meteor.js');
+  api.use('cosmos:browserify', 'client');
+  api.addFiles('sanitize-html.browserify.js', 'client');
+  api.addFiles('sanitize-html-meteor.js', 'server');
+
+  api.export('sanitizeHtml');
 });
 
 Package.onTest(function(api) {

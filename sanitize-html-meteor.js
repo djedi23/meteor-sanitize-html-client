@@ -1,1 +1,1 @@
-// Write your package code here!
+sanitizeHtml = Npm.require('sanitize-html');
