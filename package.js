@@ -10,10 +10,10 @@ Package.describe({
   documentation: 'README.md'
 });
 
-//Npm.depends({'sanitize-html':'1.9.0'});
+Npm.depends({'sanitize-html':'1.9.0'});
 
 Package.onUse(function(api) {
-  api.use('cosmos:browserify', 'client');
+  api.use('cosmos:browserify@0.5.0', 'client');
   api.addFiles('sanitize-html.browserify.js', 'client');
 //  api.addFiles('sanitize-html-server.js', 'server');
 
