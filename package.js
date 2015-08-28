@@ -10,18 +10,18 @@ Package.describe({
   documentation: 'README.md'
 });
 
-Npm.depends({'sanitize-html':'1.9.0'});
+//Npm.depends({'sanitize-html':'1.9.0'});
 
 Package.onUse(function(api) {
   api.use('cosmos:browserify', 'client');
   api.addFiles('sanitize-html.browserify.js', 'client');
-  api.addFiles('sanitize-html-server.js', 'server');
+//  api.addFiles('sanitize-html-server.js', 'server');
 
   api.export('sanitizeHtml');
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('djedi:sanitize-html-client');
-  api.addFiles('sanitize-html-client-tests.js');
+  api.use('tinytest', 'client');
+  api.use('djedi:sanitize-html-client', 'client');
+  api.addFiles('sanitize-html-client-tests.js', 'client');
 });
