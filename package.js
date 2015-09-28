@@ -1,6 +1,6 @@
 Package.describe({
   name: 'djedi:sanitize-html-client',
-  version: '1.10.0_1',
+  version: '1.10.1',
   // Brief, one-line summary of the package.
   summary: "Wrapper for punkave's Sanitize HTML node package",
   // URL to the Git repository containing the source code for this package.
@@ -10,7 +10,7 @@ Package.describe({
   documentation: 'README.md'
 });
 
-Npm.depends({'sanitize-html':'1.10.0'});
+Npm.depends({'sanitize-html':'1.10.1'});
 
 Package.onUse(function(api) {
   api.use('cosmos:browserify@0.5.0', 'client');
